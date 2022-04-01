@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Product_Review_Management_Using_LINQ/1.0.0": {
+        "runtime": {
+          "Product_Review_Management_Using_LINQ.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Product_Review_Management_Using_LINQ/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
