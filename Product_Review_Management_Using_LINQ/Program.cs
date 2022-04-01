@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace Product_Review_Management_Using_LINQ
 {
@@ -26,7 +27,16 @@ namespace Product_Review_Management_Using_LINQ
             new ProductReview() { ProductId = 13, UserId = 1, Rating = 5, Review = "Good", isLike=true },
             new ProductReview() { ProductId = 14, UserId = 1, Rating = 2, Review = "Bad", isLike=true },
             new ProductReview() { ProductId = 15, UserId = 1, Rating = 5, Review = "Good", isLike=true },
-            new ProductReview() { ProductId = 16, UserId = 1, Rating = 5, Review = "Good", isLike=true }
+            new ProductReview() { ProductId = 16, UserId = 1, Rating = 5, Review = "Good", isLike=true },
+            new ProductReview() { ProductId = 17, UserId = 1, Rating = 5, Review = "Good", isLike=true },
+            new ProductReview() { ProductId = 18, UserId = 1, Rating = 5, Review = "Good", isLike=true },
+            new ProductReview() { ProductId = 19, UserId = 1, Rating = 5, Review = "Good", isLike=true },
+            new ProductReview() { ProductId = 20, UserId = 1, Rating = 5, Review = "Good", isLike=true },
+            new ProductReview() { ProductId = 21, UserId = 1, Rating = 5, Review = "Good", isLike=true },
+            new ProductReview() { ProductId = 22, UserId = 1, Rating = 5, Review = "Good", isLike=true },
+            new ProductReview() { ProductId = 23, UserId = 1, Rating = 5, Review = "Good", isLike=true },
+            new ProductReview() { ProductId = 24, UserId = 1, Rating = 5, Review = "Good", isLike=true },
+            new ProductReview() { ProductId = 25, UserId = 1, Rating = 5, Review = "Good", isLike=true }
             };
 
            /* Console.WriteLine("Rows in the table = ");
@@ -51,7 +61,13 @@ namespace Product_Review_Management_Using_LINQ
             //management.RetrieveProductIdAndReview(productReviewList);
 
             //UC-6
-            management.SkipTopFiveRecords(productReviewList);
+            //management.SkipTopFiveRecords(productReviewList);
+
+            DataTable dataTable = management.CreateTable(productReviewList);
+            foreach (var list in productReviewList)
+            {
+                dataTable.Rows.Add(list.ProductId, list.UserId, list.Rating, list.Review, list.isLike);
+            }
 
         }
     }

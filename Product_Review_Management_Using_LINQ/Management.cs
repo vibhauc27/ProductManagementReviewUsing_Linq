@@ -65,5 +65,15 @@ namespace Product_Review_Management_Using_LINQ
                 Console.WriteLine("ProductId:-" + list.ProductId + " UserId:-" + list.UserId + " Ratings:-" + list.Rating + " Review:-" + list.Review + " IsLike:-" + list.isLike);
             }
         }
+
+        public DataTable CreateTable(List<ProductReview> listProductReview)
+        {
+            dataTable.Columns.Add("ProductId");
+            dataTable.Columns.Add("UserId");
+            dataTable.Columns.Add("Rating");
+            dataTable.Columns.Add("Review");
+            dataTable.Columns.Add("isLike");
+            return dataTable;
+        }
     }
 }
