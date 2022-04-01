@@ -10,6 +10,7 @@ namespace Product_Review_Management_Using_LINQ
 
             List<ProductReview> productReviewList = new List<ProductReview>()
             {
+             //UC-1
             new ProductReview() { ProductId = 1, UserId = 1, Rating = 5, Review = "Good", isLike=true},
             new ProductReview() { ProductId = 2, UserId = 1, Rating = 4, Review = "Good", isLike=true },
             new ProductReview() { ProductId = 3, UserId = 1, Rating = 7, Review = "Good", isLike=true },
@@ -36,7 +37,14 @@ namespace Product_Review_Management_Using_LINQ
 
 
             Management management = new Management();
-            management.TopRecords(productReviewList);
+
+            //UC-2
+            //management.TopRecords(productReviewList);
+
+            //UC-3
+            management.SelectedRecords(productReviewList);
+
         }
     }
+
 }
