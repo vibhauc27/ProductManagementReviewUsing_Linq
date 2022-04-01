@@ -42,7 +42,11 @@ namespace Product_Review_Management_Using_LINQ
             //management.TopRecords(productReviewList);
 
             //UC-3
-            management.SelectedRecords(productReviewList);
+            //management.SelectedRecords(productReviewList);
+
+            //UC-4
+            management.RetrieveCountOfRecords(productReviewList);
+
 
         }
     }
