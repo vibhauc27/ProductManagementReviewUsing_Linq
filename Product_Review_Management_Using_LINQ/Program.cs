@@ -23,9 +23,9 @@ namespace Product_Review_Management_Using_LINQ
             new ProductReview() { ProductId = 9, UserId = 1, Rating = 8, Review = "Good", isLike=false },
             new ProductReview() { ProductId = 10, UserId = 1, Rating = 2, Review = "Bad", isLike=false },
             new ProductReview() { ProductId = 11, UserId = 1, Rating = 1, Review = "Bad", isLike=false },
-            new ProductReview() { ProductId = 12, UserId = 1, Rating = 5, Review = "Good", isLike=true },
-            new ProductReview() { ProductId = 13, UserId = 1, Rating = 5, Review = "Good", isLike=true },
-            new ProductReview() { ProductId = 14, UserId = 1, Rating = 2, Review = "Bad", isLike=true },
+            new ProductReview() { ProductId = 12, UserId = 1, Rating = 5, Review = "Good", isLike=false },
+            new ProductReview() { ProductId = 13, UserId = 1, Rating = 5, Review = "Good", isLike=false },
+            new ProductReview() { ProductId = 14, UserId = 1, Rating = 2, Review = "Bad", isLike=false },
             new ProductReview() { ProductId = 15, UserId = 1, Rating = 5, Review = "Good", isLike=true },
             new ProductReview() { ProductId = 16, UserId = 1, Rating = 5, Review = "Good", isLike=true },
             new ProductReview() { ProductId = 17, UserId = 1, Rating = 5, Review = "Good", isLike=true },
@@ -68,6 +68,10 @@ namespace Product_Review_Management_Using_LINQ
             {
                 dataTable.Rows.Add(list.ProductId, list.UserId, list.Rating, list.Review, list.isLike);
             }
+
+            //UC-9
+            management.RetrieveRecordsWithIsLikeValueTrue(dataTable);
+
 
         }
     }
