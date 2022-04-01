@@ -63,14 +63,18 @@ namespace Product_Review_Management_Using_LINQ
             //UC-6
             //management.SkipTopFiveRecords(productReviewList);
 
-            DataTable dataTable = management.CreateTable(productReviewList);
+            /*DataTable dataTable = management.CreateTable(productReviewList);
             foreach (var list in productReviewList)
             {
                 dataTable.Rows.Add(list.ProductId, list.UserId, list.Rating, list.Review, list.isLike);
-            }
+            }*/
 
             //UC-9
-            management.RetrieveRecordsWithIsLikeValueTrue(dataTable);
+            //management.RetrieveRecordsWithIsLikeValueTrue(dataTable);
+
+            //UC-10
+            management.FindAvrageRating(productReviewList);
+
 
 
         }
