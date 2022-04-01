@@ -73,7 +73,11 @@ namespace Product_Review_Management_Using_LINQ
             //management.RetrieveRecordsWithIsLikeValueTrue(dataTable);
 
             //UC-10
-            management.FindAvrageRating(productReviewList);
+            //management.FindAvrageRating(productReviewList);
+
+            //UC-11
+            management.RecordsWithNiceReview(productReviewList);
+
 
 
 
